@@ -25,7 +25,7 @@ class HomeComponent extends Component  {
             <Link to="stories"  onClick={() => window.open(`/stories/${index + 1}`)}>
             <div>
               <div className=' column card'>
-                <img src={comic.avatar} alt='Avatar' />
+                <img src={comic.avatar} className="home-img" alt='Avatar' />
                 <div className='container'>
                 </div>
               </div>
