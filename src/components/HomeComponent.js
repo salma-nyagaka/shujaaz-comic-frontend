@@ -1,33 +1,41 @@
-import React from 'react'
+import React, { Component } from 'react'
 import styles from '../assets/styles/home.css'
+import { Link } from 'react-router-dom'
 
 
-const HomeComponent = props => {
-  console.log(props, 'props')
-  // renderObj = () => {
-  //   props.comics.data.map((obj, i) => {
-  //     return (
-  //       <div>
-  //         {props.data[obj].name}
-  //       </div>
-  //     )})}
-  return (
-    <div>
-      <h1 className='big'>Shujaaz Inc</h1>
-      <h2 className='big'>Comics!!!</h2>
-      <div className='row'>
-        {props.comics.data.map((comic, key) => (
-          <div>
-            <div className=' column card'>
-              <img src={comic.avatar} alt='Avatar' />
-              <div className='container'>
+class HomeComponent extends Component  {
+  constructor(props) {
+    super(props)
+    this.state = {
+        attributes: [],
+        details: [],
+        count: 0
+    }
+    // this.onChange = this.onChange.bind(this);
+
+}
+  render(){
+
+    return (
+      <div>
+        <h1 className='big'>Shujaaz Inc</h1>
+        <h2 className='big'>Comics!!!</h2>
+        <div className='row'>
+          {this.props.comics.data.map((comic, index) => (
+            <Link to="stories"  onClick={() => window.open(`/stories/${index + 1}`)}>
+            <div>
+              <div className=' column card'>
+                <img src={comic.avatar} alt='Avatar' />
+                <div className='container'>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+            </Link>
+          ))}
+        </div>
       </div>
-    </div>
-  )
-}
+    )
+  }
+  }
 
 export default HomeComponent
