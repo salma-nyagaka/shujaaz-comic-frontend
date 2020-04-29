@@ -12,7 +12,7 @@ export class HomeContainer extends React.Component {
   }
 
   componentDidMount () {
-    fetch('http://shujaaz.salmanyagaka.com/api/comics/')
+    fetch('https://shujaaz.salmanyagaka.com/api/comics/')
 
       .then(res => res.json())
       .then(data => {

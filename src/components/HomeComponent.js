@@ -11,15 +11,14 @@ class HomeComponent extends Component  {
         details: [],
         count: 0
     }
-    // this.onChange = this.onChange.bind(this);
 
 }
   render(){
 
     return (
-      <div>
-        <h1 className='big'>Shujaaz Inc</h1>
-        <h2 className='big'>Comics!!!</h2>
+      <div className="div-container">
+      {/* <h1 className='big'>Shujaaz Inc</h1>
+        <h2 className='big'>Comics!!!</h2> */}
         <div className='row'>
           {this.props.comics.data.map((comic, index) => (
             <Link to="stories"  onClick={() => window.open(`/stories/${index + 1}`)}>

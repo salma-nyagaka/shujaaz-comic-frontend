@@ -5,8 +5,8 @@ import { Link } from 'react-router-dom'
 
 const CharactersComponent = props => {
   return (
-    <div>
-    <h1 className='big'>Creators</h1>
+    <div className="div-container">
+    {/* <h1 className='big'>Creators</h1> */}
     <div className='row'>
       {props.creators.data.map((creator, index) => (
         <div>

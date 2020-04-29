@@ -14,7 +14,7 @@ export class StoriesContainer extends React.Component {
   id = window.location.pathname.replace('http://', '').split('/')
 
   componentDidMount () {
-    fetch(`http://shujaaz.salmanyagaka.com/api/comics/${this.id[2]}/stories/`)
+    fetch(`https://shujaaz.salmanyagaka.com/api/comics/${this.id[2]}/stories/`)
 
       .then(res => res.json())
       .then(data => {
