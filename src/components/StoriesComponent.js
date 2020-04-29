@@ -1,28 +1,43 @@
 import React from 'react';
 import '../assets/styles/stories.css';
-import { Link } from 'react-router-dom'
+import CharactersContainer from '../containers/CharactersContainer'
 
 
 const StoriesComponent = (props) => {
   return (
     <div className="div-container">
-    {/* <h1 className='big'>Stories</h1> */}
-    <div className='row'>
-      {props.stories.data.map((story, index) => (
-        <Link to="stories"  onClick={() => window.open(`/stories/${index + 1}`)}>
-        <div>
-          <div className=' column card'>
-            <img src={story.avatar} alt='Avatar' />
-            <div className='container'>
-              <h1>{story.title}</h1>
-              <p>{story.paragraph}</p>
+    <main>
+      <article className='grid'>
+        <section className='grid__col-2'>
+          <div className='grid__item-lg'>
+            {/* <img
+              // src={props.stori}
+              className='grid__item__img'
+            /> */}
+            
+
+            <h3 className='grid__col__title'>Characters</h3>
+            <CharactersContainer/>
+            <h4 className='grid__item__title'>
+            {/* {props.creator.data.first_name} {props.creator.data.last_name} */}
+
+            </h4>
+            <p className='grid__item__author'>By Jennifer Romolini</p>
+          </div>
+          <div className="second_card">
+            <h3 className='grid__col__title'>Stories</h3>
+            <div className='grid__item-sm '>
+            {props.stories.data.map(story =>
+                  <div className="grid-stories-item"> 
+                  <h3 className='grid__item__category'>{story.title}</h3>
+                  <p>{story.paragraph}</p>
+                  <p className='grid__item__author'>CLICK TO READ MORE</p>
+                </div>)}
             </div>
           </div>
-        </div>
-        </Link>
-      ))}
-    </div>
-<h3 className="made_by">Made with ♡</h3>
+        </section>
+      </article>
+    </main>
   </div>
   )
 }

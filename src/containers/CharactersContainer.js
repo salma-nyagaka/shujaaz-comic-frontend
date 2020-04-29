@@ -1,12 +1,12 @@
 import React from 'react'
 
-import SingleCreatorComponent from '../components/SingleCreatorComponent'
+import CharactersComponent from '../components/CharactersComponent'
 
-export class SingleCreatorContainer extends React.Component {
+export class CharactersContainer extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
-      creator: [],
+      characters: [],
       isLoading: true
     }
   }
@@ -15,12 +15,12 @@ export class SingleCreatorContainer extends React.Component {
 
 
   componentDidMount () {
-    fetch(`https://shujaaz.salmanyagaka.com/api/users/${this.id[2]}/`)
+    fetch(`https://shujaaz.salmanyagaka.com/api/comics/${this.id[2]}/characters/`)
 
       .then(res => res.json())
       .then(data => {
         this.setState({
-          creator: data,
+          characters: data,
           isLoading: false
         })
       })
@@ -33,11 +33,11 @@ export class SingleCreatorContainer extends React.Component {
         {this.state.isLoading ? (
           'Loading...'
         ) : (
-          <SingleCreatorComponent creator={this.state.creator} />
+          <CharactersComponent characters={this.state.characters} />
         )}
       </div>
     )
   }
 }
 
-export default SingleCreatorContainer
+export default CharactersContainer
