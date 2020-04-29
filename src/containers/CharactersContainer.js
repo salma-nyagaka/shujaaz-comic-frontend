@@ -1,23 +1,26 @@
 import React from 'react'
 
-import HomeComponent from '../components/HomeComponent'
+import CharactersComponent from '../components/CharactersComponent'
 
-export class HomeContainer extends React.Component {
+export class CharactersContainer extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
-      comics: [],
+      characters: [],
       isLoading: true
     }
   }
 
+  id = window.location.pathname.replace('http://', '').split('/')
+
+
   componentDidMount () {
-    fetch('https://shujaaz.salmanyagaka.com/api/comics/')
+    fetch(`https://shujaaz.salmanyagaka.com/api/comics/${this.id[2]}/characters/`)
 
       .then(res => res.json())
       .then(data => {
         this.setState({
-          comics: data,
+          characters: data,
           isLoading: false
         })
       })
@@ -30,11 +33,11 @@ export class HomeContainer extends React.Component {
         {this.state.isLoading ? (
           'Loading...'
         ) : (
-          <HomeComponent comics={this.state.comics} />
+          <CharactersComponent characters={this.state.characters} />
         )}
       </div>
     )
   }
 }
 
-export default HomeContainer
+export default CharactersContainer

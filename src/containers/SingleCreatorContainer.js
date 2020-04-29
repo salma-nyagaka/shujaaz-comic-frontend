@@ -15,11 +15,10 @@ export class SingleCreatorContainer extends React.Component {
 
 
   componentDidMount () {
-    fetch(`http://shujaaz.salmanyagaka.com/api/users/3/`)
+    fetch(`https://shujaaz.salmanyagaka.com/api/users/${this.id[2]}/`)
 
       .then(res => res.json())
       .then(data => {
-          console.log(data)
         this.setState({
           creator: data,
           isLoading: false

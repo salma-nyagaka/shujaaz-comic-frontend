@@ -1,26 +1,123 @@
-.topnav {
-    overflow: hidden;
-    text-align: center;
-    background-color: black;
-    padding: 20px;
-}
-
-.topnav a {
-    float: center;
-    color: #ffffff;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-    text-transform: uppercase;
-}
-
-.topnav a:hover {
-    background-color: rgb(243, 104, 94);
-    color: black;
-}
-
-.topnav a.active {
-    background-color: #E93F33;
-    color: white;
-}
+            .topnav {
+                overflow: hidden;
+                text-align: center;
+                background-color: black;
+                padding: 20px;
+            }
+            
+            .topnav a {
+                font-family: "Bangers";
+                float: center;
+                color: #ffffff;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+                font-size: 17px;
+                text-transform: uppercase;
+            }
+            
+            .topnav a:hover {
+                background-color: rgb(243, 104, 94);
+                color: black;
+            }
+            
+            .topnav a.active {
+                background-color: #E93F33;
+                color: white;
+            }
+            
+            .nav__top {
+                background: #F1F1F1;
+                padding: 0 16px;
+                /* display: flex; */
+                justify-content: space-between;
+            }
+            
+            .nav__top__link,
+            .nav__page__link {
+                color: black;
+                border-bottom: 2px dotted transparent;
+                font-size: 45px;
+                font-family: Bangers;
+                text-decoration: none;
+                text-transform: uppercase;
+                margin: 10px 8px 8px;
+                transition: border 0.3s ease;
+                /* text-shadow: -0.5px -0.5px #E93F39, 1px 1px #420D09, 2px 2px #420D09; */
+            }
+            
+            .nav__top__link:hover,
+            .nav__page__link:hover {
+                border-bottom: 2px dotted #545454;
+            }
+            
+            .nav__page {
+                /* border-top: 1px solid black; */
+                border-bottom: 1px solid black;
+                max-width: 960px;
+                margin: 0 auto;
+                padding: 10px;
+                position: relative;
+                justify-content: space-between;
+            }
+            
+            @media screen and (max-width: 740px) {
+                /*..Nav..*/
+                .nav__page {
+                    box-sizing: border-box;
+                    padding: 0 16px;
+                    width: 100%;
+                    overflow-x: scroll;
+                }
+                .nav__page__link:last-of-type {
+                    padding: 0 16px 0 0;
+                }
+            }
+            
+            @import url(//fonts.googleapis.com/css?family=Patrick+Hand+SC|Bangers|Happy+Monkey);
+            .bigg {
+                font-family: "Bangers";
+                margin: 0 0 -1em 0;
+                text-shadow: -1px -1px #E93F39, 1px 1px #420D09, 2px 2px #420D09;
+                /* -webkit-transform: rotate(-10deg) skew(-10deg, 0); */
+                /* transform: rotate(-10deg) skew(-10deg, 0); */
+                padding-bottom: 80px;
+                text-align: center;
+                width: 100%;
+                padding-top: 20px;
+            }
+            /* h1 a {
+                color: white;
+                text-decoration: none;
+                font-weight: bold;
+            }
+            
+            h1.bigg {
+                font-size: 90px;
+                color: black;
+                margin-bottom: -.75em;
+            }
+            
+            h2.bigg {
+                color: black;
+                font-size: 60px;
+            }
+            
+            h3.bigg {
+                font-size: 80px;
+            }
+            
+            h4.bigg {
+                font-size: 60px;
+                margin-top: -.15em;
+            }
+            
+            .burst>.bigg {
+                -webkit-transform: rotate(-22deg);
+                transform: rotate(-22deg);
+                line-height: 1em;
+                font-size: 3em;
+                text-align: center;
+                margin: 2em 1em;
+                max-width: 500px;
+            } */
