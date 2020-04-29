@@ -5,8 +5,8 @@ import { Link } from 'react-router-dom'
 
 const StoriesComponent = (props) => {
   return (
-    <div>
-    <h1 className='big'>Stories</h1>
+    <div className="div-container">
+    {/* <h1 className='big'>Stories</h1> */}
     <div className='row'>
       {props.stories.data.map((story, index) => (
         <Link to="stories"  onClick={() => window.open(`/stories/${index + 1}`)}>
