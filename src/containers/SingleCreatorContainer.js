@@ -13,10 +13,8 @@ export class SingleCreatorContainer extends React.Component {
 
   id = window.location.pathname.replace('http://', '').split('/')
 
-
   componentDidMount () {
     fetch(`https://shujaaz.salmanyagaka.com/api/users/${this.id[2]}/`)
-
       .then(res => res.json())
       .then(data => {
         this.setState({

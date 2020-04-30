@@ -8,7 +8,8 @@ const SingleComicComponent = props => {
   return (
     <div className='single-comic-div-container '>
       <nav className='comic_nav__page'>
-        <Link to='stories'
+        <Link
+          to='stories'
           className='comic_nav__page__link'
           onClick={() => window.open(`/stories/${id[2]}`)}
         >
@@ -18,16 +19,18 @@ const SingleComicComponent = props => {
       </nav>
 
       <div className='header'>
-        <img className="comic-avatar"src={props.comic.data.avatar} alt="avatar"/>
+        <img
+          className='comic-avatar'
+          src={props.comic.data.avatar}
+          alt='avatar'
+        />
       </div>
 
       <div className='row'>
         <div className='leftcolumn'>
           <div className='card'>
             <h2>{props.comic.data.title}</h2>
-            <p>
-            {props.comic.data.summary}
-            </p>
+            <p>{props.comic.data.summary}</p>
           </div>
         </div>
         <div className='rightcolumn'>
@@ -37,7 +40,8 @@ const SingleComicComponent = props => {
             <div className='fakeimg'>
               <img
                 className='creator-image'
-                src={props.comic.data.creator.avatar} alt="avatar"
+                src={props.comic.data.creator.avatar}
+                alt='avatar'
               />
             </div>
             <p>

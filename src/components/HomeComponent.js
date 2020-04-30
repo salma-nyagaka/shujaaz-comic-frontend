@@ -8,7 +8,8 @@ class HomeComponent extends Component {
       <div className='home-div-container'>
         <div className='home-grid-container'>
           {this.props.comics.data.map((comic, index) => (
-            <Link key={index}
+            <Link
+              key={index}
               to='comic'
               onClick={() => window.open(`/comic/${index + 1}`)}
             >

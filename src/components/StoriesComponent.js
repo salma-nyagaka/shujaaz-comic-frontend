@@ -17,7 +17,9 @@ const StoriesComponent = props => {
               <div className='grid__item-sm '>
                 {props.stories.data.map((story, index) => (
                   <div className='grid-stories-item' key={index}>
-                    <h3 className='stories__grid__item__category'>{story.title}</h3>
+                    <h3 className='stories__grid__item__category'>
+                      {story.title}
+                    </h3>
                     <p>{story.paragraph}</p>
                     <p className='grid__item__author'>CLICK TO READ MORE</p>
                   </div>
