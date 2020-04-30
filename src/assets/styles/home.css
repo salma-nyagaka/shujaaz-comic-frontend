@@ -37,6 +37,10 @@
         width: 135px;
         height: 130px;
     }
+    .home-div-container {
+        padding-left: none;
+        padding-right: none;
+    }
 }
 
 @media (max-width: 360px) {
@@ -52,6 +56,10 @@
         width: 135px;
         height: 100px;
     }
+    .home-div-container {
+        padding-left: none;
+        padding-right: none;
+    }
 }
 
 @media (max-width: 768px) {
@@ -62,6 +70,10 @@
         display: grid;
         grid-template-columns: auto auto;
         padding: 10px;
+    }
+    .home-div-container {
+        padding-left: 0px;
+        padding-right: 0px;
     }
 }
 

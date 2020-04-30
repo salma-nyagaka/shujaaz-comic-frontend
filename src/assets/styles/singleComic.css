@@ -21,7 +21,7 @@
 }
 
 .creator-image {
-    width: 100px;
+    width: 120px;
 }
 
 .card {
@@ -84,9 +84,10 @@
 }
 
 h2 {
-    color: black;
-    font-size: 28px;
+    color: red;
+    font-size: 40px;
     font-family: "Bangers";
+    text-shadow: 3px -0.5px black, 1px 1px black, 2px 2px black;
 }
 
 .comic-avatar {
