@@ -13,10 +13,8 @@ export class SingleComicContainer extends React.Component {
 
   id = window.location.pathname.replace('http://', '').split('/')
 
-
   componentDidMount () {
     fetch(`https://shujaaz.salmanyagaka.com/api/comics/${this.id[2]}/`)
-
       .then(res => res.json())
       .then(data => {
         this.setState({

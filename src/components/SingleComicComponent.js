@@ -1,18 +1,17 @@
-import React, { Component } from 'react'
+import React from 'react'
 import styles from '../assets/styles/singleComic.css'
 import { Link } from 'react-router-dom'
 
 const SingleComicComponent = props => {
-  console.group(props.comic.data, 'prop')
   let id = window.location.pathname.replace('http://', '').split('/')
-  console.log(id, 'id')
 
   return (
-    <div className='div-container'>
+    <div className='single-comic-div-container '>
       <nav className='comic_nav__page'>
         <Link
+          to='stories'
           className='comic_nav__page__link'
-          onClick={() => window.location.href(`/stories/${id[2]}`)}
+          onClick={() => window.open(`/stories/${id[2]}`)}
         >
           {' '}
           VIEW STORIES
@@ -20,20 +19,18 @@ const SingleComicComponent = props => {
       </nav>
 
       <div className='header'>
-        <img src={props.comic.data.avatar} />
+        <img
+          className='comic-avatar'
+          src={props.comic.data.avatar}
+          alt='avatar'
+        />
       </div>
 
       <div className='row'>
         <div className='leftcolumn'>
           <div className='card'>
             <h2>{props.comic.data.title}</h2>
-            <p>Some text..</p>
-            <p>
-              Sunt in culpa qui officia deserunt mollit anim id est laborum
-              consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-              labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-              nostrud exercitation ullamco.
-            </p>
+            <p>{props.comic.data.summary}</p>
           </div>
         </div>
         <div className='rightcolumn'>
@@ -44,6 +41,7 @@ const SingleComicComponent = props => {
               <img
                 className='creator-image'
                 src={props.comic.data.creator.avatar}
+                alt='avatar'
               />
             </div>
             <p>

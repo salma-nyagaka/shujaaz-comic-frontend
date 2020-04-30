@@ -13,7 +13,6 @@ export class CreatorsContainer extends React.Component {
 
   componentDidMount () {
     fetch('https://shujaaz.salmanyagaka.com/api/users/')
-
       .then(res => res.json())
       .then(data => {
         this.setState({

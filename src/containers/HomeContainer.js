@@ -13,7 +13,6 @@ export class HomeContainer extends React.Component {
 
   componentDidMount () {
     fetch('https://shujaaz.salmanyagaka.com/api/comics/')
-
       .then(res => res.json())
       .then(data => {
         this.setState({

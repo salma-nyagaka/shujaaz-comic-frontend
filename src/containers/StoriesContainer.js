@@ -1,8 +1,6 @@
-import React from 'react';
+import React from 'react'
 
 import StoriesComponent from '../components/StoriesComponent'
-
-import CharactersContainer from '../containers/CharactersContainer'
 
 export class StoriesContainer extends React.Component {
   constructor (props) {
@@ -17,11 +15,10 @@ export class StoriesContainer extends React.Component {
 
   componentDidMount () {
     fetch(`https://shujaaz.salmanyagaka.com/api/comics/${this.id[2]}/stories/`)
-
       .then(res => res.json())
       .then(data => {
         this.setState({
-        stories: data,
+          stories: data,
           isLoading: false
         })
       })
@@ -34,8 +31,8 @@ export class StoriesContainer extends React.Component {
         {this.state.isLoading ? (
           'Loading...'
         ) : (
-          <StoriesComponent stories={this.state.stories}  />
-          )}
+          <StoriesComponent stories={this.state.stories} />
+        )}
       </div>
     )
   }
