@@ -8,12 +8,13 @@ import { BrowserRouter } from 'react-router-dom'
 
 ReactDOM.render(
     <BrowserRouter>
-        <div>
-            <App />
-        </div>
-    </BrowserRouter>,
+        // {/* <div> */}
+        <App />
+        // {/* </div> */}
+        // </BrowserRouter>,
     document.getElementById('root')
 );
 
 
-serviceWorker.unregister();
+
+// serviceWorker.unregister();
