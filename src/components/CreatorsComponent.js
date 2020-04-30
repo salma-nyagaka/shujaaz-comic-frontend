@@ -5,7 +5,7 @@ import { Link, useHistory } from 'react-router-dom'
 const CharactersComponent = props => {
   let history = useHistory();
   return (
-    <div className='div-container'>
+    <div className='creators-div-container'>
       <div className='creators-div-container'>
         <div className='creators-grid-container'>
           {props.creators.data.map((creator, index) => (
