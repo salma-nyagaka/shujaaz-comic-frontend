@@ -28,6 +28,7 @@
     background-color: white;
     padding: 1px 2px 2px 2px;
     margin-top: 20px;
+    box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgba(255, 255, 255, 0.445), 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
 }
 
 .row:after {
@@ -92,6 +93,7 @@ h2 {
 
 .comic-avatar {
     width: 400px;
+    box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgba(255, 255, 255, 0.445), 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
 }
 
 @media screen and (max-width: 600px) {
