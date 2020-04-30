@@ -19,7 +19,7 @@
 }
 
 .home-img {
-    width: 300px;
+    width: 250px;
     height: 200px;
 }
 
@@ -33,8 +33,8 @@
         padding: 10px;
     }
     .home-img {
-        width: 150px;
-        height: 150px;
+        width: 135px;
+        height: 130px;
     }
 }
 
@@ -48,8 +48,8 @@
         padding: 10px;
     }
     .home-img {
-        width: 150px;
-        height: 150px;
+        width: 135px;
+        height: 100px;
     }
 }
 
@@ -62,4 +62,9 @@
         grid-template-columns: auto auto;
         padding: 10px;
     }
+}
+
+.home-div-container {
+    padding-left: 10%;
+    padding-right: 10%;
 }

@@ -1,17 +1,17 @@
-import React, { Component } from 'react'
+import React from 'react'
 import styles from '../assets/styles/home.css'
-import { Link } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 
-class HomeComponent extends Component {
-  render () {
+
+const HomeComponent= props => {
+  let history = useHistory();
     return (
       <div className='home-div-container'>
         <div className='home-grid-container'>
-          {this.props.comics.data.map((comic, index) => (
+          {props.comics.data.map((comic, index) => (
             <Link
               key={index}
-              to='comic'
-              onClick={() => window.open(`/comic/${index + 1}`)}
+              onClick={() =>  history.push(`/comic/${index + 1}`)}
             >
               <div>
                 <div className='home-grid-item'>
@@ -23,7 +23,7 @@ class HomeComponent extends Component {
         </div>
       </div>
     )
-  }
+  
 }
 
 export default HomeComponent

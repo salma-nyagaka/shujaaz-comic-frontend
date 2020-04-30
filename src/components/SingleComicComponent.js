@@ -1,17 +1,17 @@
 import React from 'react'
 import styles from '../assets/styles/singleComic.css'
-import { Link } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 
 const SingleComicComponent = props => {
+  let history = useHistory();
   let id = window.location.pathname.replace('http://', '').split('/')
 
   return (
     <div className='single-comic-div-container '>
       <nav className='comic_nav__page'>
         <Link
-          to='stories'
           className='comic_nav__page__link'
-          onClick={() => window.open(`/stories/${id[2]}`)}
+          onClick={() => history.push(`/stories/${id[2]}`)}
         >
           {' '}
           VIEW STORIES

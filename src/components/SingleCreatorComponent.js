@@ -28,11 +28,11 @@ const SingleCreatorComponent = props => {
                     <br />
                     {props.creator.data.email}
                   </p>
-                  <p className='grid__item__title'>
+                  {/* <p className='grid__item__title'>
                     Phone:
                     <br />
                     07655675657
-                  </p>
+                  </p> */}
                 </div>
               </div>
             </div>

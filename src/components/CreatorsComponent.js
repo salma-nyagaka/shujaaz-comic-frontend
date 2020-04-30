@@ -1,8 +1,9 @@
 import React from 'react'
 import '../assets/styles/creators.css'
-import { Link } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 
 const CharactersComponent = props => {
+  let history = useHistory();
   return (
     <div className='div-container'>
       <div className='creators-div-container'>
@@ -19,9 +20,8 @@ const CharactersComponent = props => {
                   {creator.first_name} {creator.last_name}{' '}
                 </h2>
                 <Link
-                  to='stories'
                   className='profile-button'
-                  onClick={() => window.open(`/creators/${index + 1}`)}
+                  onClick={() => history.push(`/creators/${index + 1}`)}
                 >
                   VIEW PROFILE
                 </Link>
