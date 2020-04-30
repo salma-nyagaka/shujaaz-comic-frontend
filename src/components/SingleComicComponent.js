@@ -8,11 +8,11 @@ const SingleComicComponent = props => {
   console.log(id, 'id')
 
   return (
-    <div className='div-container'>
+    <div className='single-comic-div-container '>
       <nav className='comic_nav__page'>
         <Link
           className='comic_nav__page__link'
-          onClick={() => window.location.href(`/stories/${id[2]}`)}
+          onClick={() => window.open(`/stories/${id[2]}`)}
         >
           {' '}
           VIEW STORIES
@@ -20,19 +20,15 @@ const SingleComicComponent = props => {
       </nav>
 
       <div className='header'>
-        <img src={props.comic.data.avatar} />
+        <img className="comic-avatar"src={props.comic.data.avatar} />
       </div>
 
       <div className='row'>
         <div className='leftcolumn'>
           <div className='card'>
             <h2>{props.comic.data.title}</h2>
-            <p>Some text..</p>
             <p>
-              Sunt in culpa qui officia deserunt mollit anim id est laborum
-              consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-              labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-              nostrud exercitation ullamco.
+            {props.comic.data.summary}
             </p>
           </div>
         </div>

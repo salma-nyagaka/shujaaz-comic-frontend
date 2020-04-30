@@ -2,38 +2,23 @@
     box-sizing: border-box;
 }
 
-
-/* Add a gray background color with some padding */
-
 body {
     font-family: Arial;
     padding: 20px;
     background: #f1f1f1;
 }
 
-
-/* Header/Blog Title */
-
 .header {
     padding: 30px;
     font-size: 40px;
     text-align: center;
-    background: white;
+    background: black;
 }
-
-
-/* Create two unequal columns that floats next to each other */
-
-
-/* Left column */
 
 .leftcolumn {
     float: left;
     width: 75%;
 }
-
-
-/* Right column */
 
 .rightcolumn {
     float: left;
@@ -45,26 +30,17 @@ body {
     width: 100px;
 }
 
-
-/* Add a card effect for articles */
-
 .card {
     background-color: white;
     padding: 1px 2px 2px 2px;
     margin-top: 20px;
 }
 
-
-/* Clear floats after the columns */
-
 .row:after {
     content: "";
     display: table;
     clear: both;
 }
-
-
-/* Footer */
 
 .footer {
     padding: 20px;
@@ -73,20 +49,19 @@ body {
     margin-top: 20px;
 }
 
-
-/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
-
 @media screen and (max-width: 800px) {
     .leftcolumn,
     .rightcolumn {
         width: 100%;
         padding: 0;
     }
+    .header {
+        padding: 0px
+    }
 }
 
 @import url(//fonts.googleapis.com/css?family=Patrick+Hand+SC|Bangers|Happy+Monkey);
 .comic_nav__page {
-    /* border-top: 1px solid black; */
     border-bottom: 1px solid black;
     font-family: "Bangers";
     max-width: 120px;
@@ -101,4 +76,67 @@ body {
 .comic_nav__page a {
     text-decoration: none;
     color: black;
+    font-size: 36px;
+}
+
+.comic_nav__page:hover a {
+    border-bottom: 2px dotted #545454;
+    color: red;
+}
+
+.single-comic-div-container {
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+h2 {
+    color: black;
+    font-size: 28px;
+    font-family: "Bangers";
+}
+
+.comic-avatar {
+    width: 400px;
+}
+
+@media screen and (max-width: 600px) {
+    .comic-avatar {
+        size: 100px;
+        width: 300px;
+    }
+    .header {
+        padding: 0px;
+        background: transparent;
+    }
+    .creator-image {
+        width: 200px;
+    }
+}
+
+@media (max-width: 360px) {
+    .comic-avatar {
+        size: 100px;
+        width: 300px;
+    }
+    .header {
+        padding: 0px;
+        background: transparent;
+    }
+    .creator-image {
+        width: 200px;
+    }
+}
+
+@media (max-width: 768px) {
+    .comic-avatar {
+        size: 100px;
+        width: 300px;
+    }
+    .header {
+        padding: 0px;
+        background: transparent;
+    }
+    .creator-image {
+        width: 200px;
+    }
 }
