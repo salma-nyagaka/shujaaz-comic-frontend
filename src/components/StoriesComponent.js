@@ -11,13 +11,12 @@ const StoriesComponent = props => {
             <div className='grid__item-lg'>
               <h3 className='stories__grid__col__title'>Characters</h3>
               <CharactersContainer />
-              <h4 className='grid__item__title'></h4>
             </div>
             <div className='second_card'>
               <h3 className='stories__grid__col__title'>Stories</h3>
               <div className='grid__item-sm '>
-                {props.stories.data.map(story => (
-                  <div className='grid-stories-item'>
+                {props.stories.data.map((story, index) => (
+                  <div className='grid-stories-item' key={index}>
                     <h3 className='stories__grid__item__category'>{story.title}</h3>
                     <p>{story.paragraph}</p>
                     <p className='grid__item__author'>CLICK TO READ MORE</p>

@@ -1,6 +1,5 @@
 import React from 'react'
 import '../assets/styles/singleCreators.css'
-import { Link } from 'react-router-dom'
 
 const SingleCreatorComponent = props => {
   return (
@@ -10,7 +9,7 @@ const SingleCreatorComponent = props => {
           <section className='grid__col-2'>
             <div className='grid__item-lg'>
               <img
-                src={props.creator.data.avatar}
+                src={props.creator.data.avatar} alt="avatar"
                 className='grid__item__img'
               />
               <h4 className='grid__item__title'>

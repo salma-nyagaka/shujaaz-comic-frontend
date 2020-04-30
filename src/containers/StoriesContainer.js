@@ -2,7 +2,6 @@ import React from 'react';
 
 import StoriesComponent from '../components/StoriesComponent'
 
-import CharactersContainer from '../containers/CharactersContainer'
 
 export class StoriesContainer extends React.Component {
   constructor (props) {

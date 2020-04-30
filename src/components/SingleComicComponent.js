@@ -1,16 +1,14 @@
-import React, { Component } from 'react'
+import React from 'react'
 import styles from '../assets/styles/singleComic.css'
 import { Link } from 'react-router-dom'
 
 const SingleComicComponent = props => {
-  console.group(props.comic.data, 'prop')
   let id = window.location.pathname.replace('http://', '').split('/')
-  console.log(id, 'id')
 
   return (
     <div className='single-comic-div-container '>
       <nav className='comic_nav__page'>
-        <Link
+        <Link to='stories'
           className='comic_nav__page__link'
           onClick={() => window.open(`/stories/${id[2]}`)}
         >
@@ -20,7 +18,7 @@ const SingleComicComponent = props => {
       </nav>
 
       <div className='header'>
-        <img className="comic-avatar"src={props.comic.data.avatar} />
+        <img className="comic-avatar"src={props.comic.data.avatar} alt="avatar"/>
       </div>
 
       <div className='row'>
@@ -39,7 +37,7 @@ const SingleComicComponent = props => {
             <div className='fakeimg'>
               <img
                 className='creator-image'
-                src={props.comic.data.creator.avatar}
+                src={props.comic.data.creator.avatar} alt="avatar"
               />
             </div>
             <p>

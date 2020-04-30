@@ -60,7 +60,7 @@ body {
     }
 }
 
-@import url(//fonts.googleapis.com/css?family=Patrick+Hand+SC|Bangers|Happy+Monkey);
+@import url(https://fonts.googleapis.com/css?family=Patrick+Hand+SC|Bangers|Happy+Monkey);
 .comic_nav__page {
     border-bottom: 1px solid black;
     font-family: "Bangers";
